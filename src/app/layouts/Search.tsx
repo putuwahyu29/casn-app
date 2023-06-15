@@ -176,7 +176,7 @@ const Search = ({ searchList }: Props) => {
                     className="btn btn-outline-primary btn-sm"
                     href={`/${informasi_folder}/${item.slug}`}
                   >
-                    read more
+                    Lihat Selengkapnya
                   </a>
                 </div>
               </div>
