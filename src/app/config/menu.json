@@ -1,0 +1,30 @@
+{
+  "main": [
+    {
+      "name": "Beranda",
+      "url": "/"
+    },
+    {
+      "name": "Jadwal",
+      "url": "/kategori/jadwal"
+    },
+    {
+      "name": "Pengumuman",
+      "url": "/kategori/pengumuman"
+    },
+    {
+      "name": "Semua Informasi",
+      "url": "/informasi"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Elements",
+      "url": "/elements"
+    },
+    {
+      "name": "Privacy Policy",
+      "url": "/privacy-policy"
+    }
+  ]
+}
