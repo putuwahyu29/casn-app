@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Beranda | CASN BPS",
-    "base_url": "https://casn-app.vercel.app",
+    "title": "Beranda",
+    "base_url": "https://casn-bps.vercel.app",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -36,6 +36,6 @@
   "metadata": {
     "meta_author": "IMK Kelompok 7 Kelas 3SI2",
     "meta_image": "/images/og-image.png",
-    "meta_description": "CASN BPS"
+    "meta_description": "Seleksi PPPK BPS"
   }
 }
