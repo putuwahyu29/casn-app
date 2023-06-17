@@ -10,7 +10,7 @@ const NotFound = async () => {
   const { image, title } = data.frontmatter;
   return (
     <>
-      <SeoMeta title={"Page Not Found"} image={"/images/404.png"} />
+      <SeoMeta title={"Halaman Tidak Ditemukan"} image={"/images/404.png"} />
       <section className="section-sm">
         <div className="container">
           <div className="row justify-center">
@@ -18,7 +18,7 @@ const NotFound = async () => {
               <ImageFallback
                 className="mb-8 w-full"
                 src={image}
-                alt="page not found"
+                alt="Halaman Tidak Ditemukan"
                 height={320}
                 width={630}
               />

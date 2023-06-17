@@ -31,8 +31,8 @@ const SeoMeta = ({
           meta_title
             ? meta_title
             : title
-            ? title + " | CASN BPS"
-            : config.site.title + " | CASN BPS"
+            ? title + " | Seleksi PPPK BPS"
+            : config.site.title + " | Seleksi PPPK BPS"
         )}
       </title>
 

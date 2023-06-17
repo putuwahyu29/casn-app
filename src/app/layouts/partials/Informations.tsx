@@ -64,7 +64,7 @@ const Informations = ({ data }: { data: PageData }) => {
                   {data.frontmatter.informations.map(
                     (item: Informations, index: number) => (
                       <SwiperSlide key={index}>
-                        <div className="rounded-lg bg-theme-light px-7 py-10 dark:bg-darkmode-theme-light">
+                        <div className="rounded-lg bg-theme-light px-5 py-7 dark:bg-darkmode-theme-light">
                           <ImageFallback
                             height={2800}
                             width={2076}
@@ -76,7 +76,9 @@ const Informations = ({ data }: { data: PageData }) => {
                                 <Link
                                   href={`/${informasi_folder}/${item.slug}`}
                                 >
-                                  {item.judul}
+                                  <div className="h-[1.3em] overflow-hidden">
+                                    {item.judul}
+                                  </div>
                                 </Link>
                               </h4>
                             </div>

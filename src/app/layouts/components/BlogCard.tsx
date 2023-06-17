@@ -19,8 +19,10 @@ const BlogCard = ({ data }: { data: Post }) => {
           height={230}
         />
       )}
-      <h4 className="mb-3">
-        <Link href={`/${informasi_folder}/${data.slug}`}>{title}</Link>
+      <h4>
+        <Link href={`/${informasi_folder}/${data.slug}`}>
+          <div className="h-[1.3em] overflow-hidden">{title}</div>
+        </Link>
       </h4>
       <ul className="mb-4">
         <li className="mr-4 inline-block">
