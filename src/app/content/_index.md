@@ -7,7 +7,7 @@ banner:
   button:
     enable: false
     label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/nextplate"
+    link: "https://github.com/"
 
 # Features
 features:
