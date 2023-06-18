@@ -6,7 +6,6 @@ import config from "@/app/config/config.json";
 import social from "@/app/config/social.json";
 import { markdownify } from "@/app/lib/utils/textConverter";
 import Link from "next/link";
-import { FaArrowUp } from "react-icons/fa";
 
 const Footer = () => {
   const { copyright } = config.params;
@@ -24,7 +23,7 @@ const Footer = () => {
           <div className="mb-3 text-center lg:col-6 lg:mb-0">
             <Link href="#">
               <div className="text-darkmode-light dark:text-darkmode-light hover:text-white">
-                Kembali ke atas <FaArrowUp className="inline" />
+                Kembali ke atas
               </div>
             </Link>
           </div>

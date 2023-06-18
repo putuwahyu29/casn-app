@@ -4,6 +4,7 @@ import theme from "@/app/config/theme.json";
 import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
 import Providers from "@/partials/Providers";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import "@/app/styles/main.scss";
 
 export default function RootLayout({
@@ -59,6 +60,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <main>{children}</main>
+          <ScrollToTopButton />
           <Footer />
         </Providers>
       </body>
