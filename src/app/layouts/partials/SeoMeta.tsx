@@ -24,7 +24,7 @@ const SeoMeta = ({
   const pathname = usePathname();
 
   return (
-    <>
+    <div>
       {/* title */}
       <title>
         {plainify(
@@ -75,7 +75,7 @@ const SeoMeta = ({
         property="og:image"
         content={`${base_url}${image ? image : meta_image}`}
       />
-    </>
+    </div>
   );
 };
 

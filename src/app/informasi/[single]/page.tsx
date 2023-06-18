@@ -1,17 +1,10 @@
-import BlogCard from "@/components/BlogCard";
-import ImageFallback from "@/components/ImageFallback";
 import config from "@/app/config/config.json";
 import { getSinglePage } from "@/app/lib/contentParser";
-import similerItems from "@/app/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/app/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/app/types";
 import Link from "next/link";
-import {
-  FaRegClock,
-  FaRegFolder,
-  FaRegUserCircle,
-} from "react-icons/fa/index.js";
+import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
 
 const { informasi_folder } = config.settings;
 
@@ -45,10 +38,10 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
     tags,
     file,
   } = frontmatter;
-  const similarPosts = similerItems(post, posts, post.slug!);
+  // const similarPosts = similerItems(post, posts, post.slug!);
 
   return (
-    <>
+    <div>
       <SeoMeta
         title={title}
         meta_title={meta_title}
@@ -60,7 +53,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
           <div className="row justify-center">
             <h1
               dangerouslySetInnerHTML={markdownify(title)}
-              className="h2 mb-4"
+              className="h2 mb-4 text-primary"
             />
             <ul className="mb-4">
               <li className="mr-4 inline-block">
@@ -96,20 +89,13 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
             </div>
             <article className="lg:col-10">
               {file && (
-                <div className="mb-10">
-                  {/* <ImageFallback
-                    src={image}
-                    height={500}
-                    width={1200}
-                    alt={title}
-                    className="w-full rounded"
-                  /> */}
+                <div className="mt-3">
                   <iframe
                     src={file}
                     height={800}
-                    width={1200}
-                    allow="autoplay"
-                    className="w-full rounded"
+                    width={1000}
+                    className="w-full rounded border-collapse border-4 border-gray-300 dark:border-darkmode-theme-light"
+                    loading="lazy"
                   ></iframe>
                 </div>
               )}
@@ -122,14 +108,14 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
             <div className="row justify-center">
               {similarPosts.map((post) => (
                 <div key={post.slug} className="lg:col-4">
-                  <BlogCard data={post} />
+                  <InformationCard data={post} />
                 </div>
               ))}
             </div>
           </div> */}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

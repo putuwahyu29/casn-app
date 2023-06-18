@@ -1,4 +1,4 @@
-import BlogCard from "@/components/BlogCard";
+import InformationCard from "@/components/InformationCard";
 import config from "@/app/config/config.json";
 import { getSinglePage } from "@/app/lib/contentParser";
 import { getTaxonomy } from "@/app/lib/taxonomyParser";
@@ -30,7 +30,7 @@ const TagSingle = ({ params }: { params: { single: string } }) => {
   const filterByTags = taxonomyFilter(informasi, "tags", params.single);
 
   return (
-    <>
+    <div>
       <SeoMeta title={humanize(params.single)} />
       <PageHeader title={humanize(params.single)} />
       <div className="section-sm pb-0">
@@ -38,13 +38,13 @@ const TagSingle = ({ params }: { params: { single: string } }) => {
           <div className="row">
             {filterByTags.map((post: Post, index: number) => (
               <div className="mb-14 md:col-6 lg:col-4" key={index}>
-                <BlogCard data={post} />
+                <InformationCard data={post} />
               </div>
             ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

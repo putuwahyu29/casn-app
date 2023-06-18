@@ -7,9 +7,13 @@
 }
 
 .btn-primary {
-  @apply border-primary bg-primary text-white dark:border-darkmode-primary dark:bg-white dark:text-dark;
+  @apply border-primary bg-primary text-white hover:opacity-80 dark:border-darkmode-primary dark:bg-white dark:text-dark;
 }
 
 .btn-outline-primary {
+  @apply border-primary bg-transparent text-primary hover:bg-primary hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-dark;
+}
+
+.btn-outline-secondary {
   @apply border-dark bg-transparent text-dark hover:bg-dark hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-dark;
 }

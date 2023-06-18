@@ -18,10 +18,10 @@ const searchList = posts.map((item) => ({
 
 const SearchPage = () => {
   return (
-    <>
+    <div>
       <SeoMeta title={"Pencarian"} />
       <Search searchList={searchList} />
-    </>
+    </div>
   );
 };
 

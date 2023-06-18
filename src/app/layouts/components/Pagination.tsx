@@ -20,7 +20,7 @@ const Pagination = ({
   }
 
   return (
-    <>
+    <div>
       {totalPages > 1 && (
         <nav
           className="flex items-center justify-center space-x-3"
@@ -138,7 +138,7 @@ const Pagination = ({
           )}
         </nav>
       )}
-    </>
+    </div>
   );
 };
 

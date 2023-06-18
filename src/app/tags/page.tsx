@@ -11,7 +11,7 @@ const tags = () => {
   const alltags = getAllTaxonomy(informasi_folder, "tags");
 
   return (
-    <>
+    <div>
       <SeoMeta title={"Tags"} />
       <PageHeader title={"Tags"} />
       <section className="section">
@@ -38,7 +38,7 @@ const tags = () => {
           </ul>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

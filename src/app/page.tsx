@@ -20,14 +20,14 @@ const Home = () => {
   } = frontmatter;
 
   return (
-    <>
+    <div>
       <SeoMeta />
       <section className="section pt-14">
         <div className="container">
           <div className="row justify-center">
             <div className="mb-16 text-center lg:col-7">
               <h1
-                className="mb-4"
+                className="mb-4 text-primary"
                 dangerouslySetInnerHTML={markdownify(banner.title)}
               />
               <p
@@ -47,15 +47,13 @@ const Home = () => {
                   className="mx-auto"
                   width="800"
                   height="420"
-                  alt="banner image"
-                  priority
+                  alt="Banner"
                 />
               </div>
             )}
           </div>
         </div>
       </section>
-
       {features.map((feature, index: number) => (
         <section
           key={index}
@@ -81,7 +79,7 @@ const Home = () => {
                 }`}
               >
                 <h2
-                  className="mb-4"
+                  className="mb-4 text-primary"
                   dangerouslySetInnerHTML={markdownify(feature.title)}
                 />
                 <p
@@ -112,7 +110,7 @@ const Home = () => {
 
       <Informations data={jadwal} />
       <Informations data={pengumuman} />
-    </>
+    </div>
   );
 };
 

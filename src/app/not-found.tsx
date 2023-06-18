@@ -9,7 +9,7 @@ const NotFound = async () => {
   const data: RegularPage = getListPage("pages/404.md");
   const { image, title } = data.frontmatter;
   return (
-    <>
+    <div>
       <SeoMeta title={"Halaman Tidak Ditemukan"} image={"/images/404.png"} />
       <section className="section-sm">
         <div className="container">
@@ -34,7 +34,7 @@ const NotFound = async () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

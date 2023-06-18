@@ -95,7 +95,7 @@ const Header = () => {
                           className={`nav-dropdown-link block ${
                             (pathname === `${child.url}/` ||
                               pathname === child.url) &&
-                            "active"
+                            "text-primary"
                           }`}
                         >
                           {child.name}
@@ -110,7 +110,7 @@ const Header = () => {
                     href={menu.url}
                     className={`nav-link block ${
                       (pathname === `${menu.url}/` || pathname === menu.url) &&
-                      "active"
+                      "text-primary"
                     }`}
                   >
                     {menu.name}
@@ -122,7 +122,7 @@ const Header = () => {
           {navigation_button.enable && (
             <li className="mt-4 inline-block lg:hidden">
               <Link
-                className="btn btn-outline-primary btn-sm"
+                className="btn btn-primary btn-sm"
                 href={navigation_button.link}
               >
                 {navigation_button.label}
@@ -143,7 +143,7 @@ const Header = () => {
           <ThemeSwitcher className="mr-5" />
           {navigation_button.enable && (
             <Link
-              className="btn btn-outline-primary btn-sm hidden lg:inline-block"
+              className="btn btn-primary btn-sm hidden lg:inline-block"
               href={navigation_button.link}
             >
               {navigation_button.label}

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
 import ImageFallback from "./ImageFallback";
 
-const BlogCard = ({ data }: { data: Post }) => {
+const InformationCard = ({ data }: { data: Post }) => {
   const { informasi_folder } = config.settings;
   const { title, image, author, categories } = data.frontmatter;
   return (
@@ -40,7 +40,7 @@ const BlogCard = ({ data }: { data: Post }) => {
         </li>
       </ul>
       <Link
-        className="btn btn-outline-primary btn-sm"
+        className="btn btn-outline-secondary btn-sm"
         href={`/${informasi_folder}/${data.slug}`}
       >
         Lihat Selengkapnya
@@ -49,4 +49,4 @@ const BlogCard = ({ data }: { data: Post }) => {
   );
 };
 
-export default BlogCard;
+export default InformationCard;

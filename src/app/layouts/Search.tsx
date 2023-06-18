@@ -79,7 +79,7 @@ const Search = ({ searchList }: Props) => {
           <div className="lg:col-8">
             <div className="flex flex-nowrap">
               <input
-                className="form-input rounded-r-none"
+                className="form-input rounded-r-none border-2 border-sky-500 dark:border-gray-50"
                 placeholder="Pencarian Informasi"
                 type="search"
                 name="search"
@@ -96,15 +96,6 @@ const Search = ({ searchList }: Props) => {
           </div>
         </div>
 
-        {/* {inputVal.length > 1 && (
-          <div className="mt-8">
-            Found {searchResults?.length}
-            {searchResults?.length && searchResults?.length === 1
-              ? " result"
-              : " results"}{" "}
-            for '{inputVal}'
-          </div>
-        )} */}
         <div className="row">
           {searchResults?.length < 1 ? (
             <div className="mx-auto pt-5 text-center">
@@ -115,15 +106,15 @@ const Search = ({ searchList }: Props) => {
                 width={211}
                 height={184}
               />
-              <h1 className="h2 mb-4">
+              <h1 className="h2 mb-4 text-primary">
                 {inputVal.length < 1
-                  ? "Pencarian Informasi disini"
+                  ? "Cari Semua Informasi Disini"
                   : "Pencarian Tidak Ditemukan!"}
               </h1>
               <p>
                 {inputVal.length < 1
                   ? "Cari posting berdasarkan judul, kategori, atau tag."
-                  : "Kami tidak dapat menemukan apa yang Anda telusuri. Coba telusuri lagi."}
+                  : "Kami tidak dapat menemukan apa yang Anda cari. Coba melakukan pencarian lagi."}
               </p>
             </div>
           ) : (
@@ -141,7 +132,9 @@ const Search = ({ searchList }: Props) => {
                   )}
                   <h4 className="mb-3">
                     <Link href={`/${informasi_folder}/${item.slug}`}>
-                      {item.frontmatter.title}
+                      <div className="h-[1.3em] overflow-hidden">
+                        {item.frontmatter.title}
+                      </div>
                     </Link>
                   </h4>
                   <ul className="mb-4">
@@ -173,7 +166,7 @@ const Search = ({ searchList }: Props) => {
                     {plainify(item.content?.slice(0, Number(summary_length)))}
                   </p>
                   <a
-                    className="btn btn-outline-primary btn-sm"
+                    className="btn btn-outline-secondary btn-sm"
                     href={`/${informasi_folder}/${item.slug}`}
                   >
                     Lihat Selengkapnya

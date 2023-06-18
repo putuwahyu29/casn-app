@@ -1,4 +1,4 @@
-import BlogCard from "@/components/BlogCard";
+import InformationCard from "@/components/InformationCard";
 import Pagination from "@/components/Pagination";
 import config from "@/app/config/config.json";
 import { getListPage, getSinglePage } from "@/app/lib/contentParser";
@@ -57,7 +57,7 @@ const Posts = ({ params }: { params: { page: number } }) => {
   const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
 
   return (
-    <>
+    <div>
       <SeoMeta
         title={title}
         meta_title={meta_title}
@@ -72,7 +72,7 @@ const Posts = ({ params }: { params: { page: number } }) => {
               <div className="row">
                 {currentPosts.map((post: any, index: number) => (
                   <div key={index} className="mb-14 md:col-6">
-                    <BlogCard data={post} />
+                    <InformationCard data={post} />
                   </div>
                 ))}
               </div>
@@ -91,7 +91,7 @@ const Posts = ({ params }: { params: { page: number } }) => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

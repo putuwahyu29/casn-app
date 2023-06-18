@@ -11,7 +11,7 @@ const ThemeSwitcher = ({ className }: { className: string }) => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <>
+    <div>
       {theme_switcher && (
         <div className={`theme-switcher ${className}`}>
           <input
@@ -57,7 +57,7 @@ const ThemeSwitcher = ({ className }: { className: string }) => {
           </label>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
