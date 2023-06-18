@@ -146,14 +146,14 @@ const Search = ({ searchList }: Props) => {
                       <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
                       {item.frontmatter.categories.map(
                         (category: string, index: number) => (
-                          <a
+                          <Link
                             href={`/kategori/${slugify(category)}`}
                             key={category}
                           >
                             {humanize(category)}
                             {index !== item.frontmatter.categories.length - 1 &&
                               ", "}
-                          </a>
+                          </Link>
                         )
                       )}
                     </li>
@@ -161,12 +161,12 @@ const Search = ({ searchList }: Props) => {
                   <p className="mb-6">
                     {plainify(item.content?.slice(0, Number(summary_length)))}
                   </p>
-                  <a
+                  <Link
                     className="btn btn-outline-secondary btn-sm"
                     href={`/${informasi_folder}/${item.slug}`}
                   >
                     Lihat Selengkapnya
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))
