@@ -41,7 +41,7 @@ const Search = ({ searchList }: Props) => {
   const fuse = new Fuse(searchList, {
     keys: ["frontmatter.title", "frontmatter.categories", "frontmatter.tags"],
     includeMatches: true,
-    minMatchCharLength: 3,
+    minMatchCharLength: 1,
     threshold: 0.5,
   });
 
