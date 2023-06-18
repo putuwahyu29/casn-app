@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="mb-3 text-center lg:col-6 lg:mb-0">
             <Link href="#">
               <div className="text-darkmode-light dark:text-darkmode-light hover:text-white">
-                Kembali ke atas
+                Kembali ke Atas
               </div>
             </Link>
           </div>
