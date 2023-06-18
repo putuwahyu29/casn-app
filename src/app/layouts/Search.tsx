@@ -139,19 +139,15 @@ const Search = ({ searchList }: Props) => {
                   </h4>
                   <ul className="mb-4">
                     <li className="mr-4 inline-block">
-                      <a href={`/authors/${slugify(item.frontmatter.author)}`}>
-                        <FaRegUserCircle
-                          className={"-mt-1 mr-2 inline-block"}
-                        />
-                        {humanize(item.frontmatter.author)}
-                      </a>
+                      <FaRegUserCircle className={"-mt-1 mr-2 inline-block"} />
+                      {humanize(item.frontmatter.author)}
                     </li>
                     <li className="mr-4 inline-block">
                       <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
                       {item.frontmatter.categories.map(
                         (category: string, index: number) => (
                           <a
-                            href={`/categories/${slugify(category)}`}
+                            href={`/kategori/${slugify(category)}`}
                             key={category}
                           >
                             {humanize(category)}
