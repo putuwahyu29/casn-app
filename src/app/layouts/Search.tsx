@@ -3,7 +3,6 @@
 import config from "@/app/config/config.json";
 import { humanize, plainify, slugify } from "@/app/lib/utils/textConverter";
 import Fuse from "fuse.js";
-import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import {
   FaRegFolder,
@@ -11,6 +10,8 @@ import {
   FaSearch,
 } from "react-icons/fa/index.js";
 import ImageFallback from "@/components/ImageFallback";
+
+import { useRouter } from "next/navigation";
 
 const { summary_length, informasi_folder } = config.settings;
 
@@ -131,11 +132,11 @@ const Search = ({ searchList }: Props) => {
                     />
                   )}
                   <h4 className="mb-3">
-                    <Link href={`/${informasi_folder}/${item.slug}`}>
+                    <a href={`/${informasi_folder}/${item.slug}`}>
                       <div className="h-[1.3em] overflow-hidden">
                         {item.frontmatter.title}
                       </div>
-                    </Link>
+                    </a>
                   </h4>
                   <ul className="mb-4">
                     <li className="mr-4 inline-block">
@@ -146,14 +147,14 @@ const Search = ({ searchList }: Props) => {
                       <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
                       {item.frontmatter.categories.map(
                         (category: string, index: number) => (
-                          <Link
+                          <a
                             href={`/kategori/${slugify(category)}`}
                             key={category}
                           >
                             {humanize(category)}
                             {index !== item.frontmatter.categories.length - 1 &&
                               ", "}
-                          </Link>
+                          </a>
                         )
                       )}
                     </li>
@@ -161,12 +162,12 @@ const Search = ({ searchList }: Props) => {
                   <p className="mb-6">
                     {plainify(item.content?.slice(0, Number(summary_length)))}
                   </p>
-                  <Link
+                  <a
                     className="btn btn-outline-secondary btn-sm"
                     href={`/${informasi_folder}/${item.slug}`}
                   >
                     Lihat Selengkapnya
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))

@@ -3,7 +3,7 @@ import { getListPage } from "@/app/lib/contentParser";
 import { markdownify } from "@/app/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { Button, Feature } from "@/app/types";
-import { FaStar } from "react-icons/fa/index.js";
+import { FaCircle } from "react-icons/fa/index.js";
 import Informations from "@/partials/Informations";
 
 const Home = () => {
@@ -98,7 +98,7 @@ const Home = () => {
                 <ul>
                   {feature.bulletpoints.map((bullet: string) => (
                     <li className="relative mb-4 pl-6" key={bullet}>
-                      <FaStar className={"absolute left-0 top-1.5"} />
+                      <FaCircle className={"absolute left-0 top-1.5 text-xs"} />
                       <span dangerouslySetInnerHTML={markdownify(bullet)} />
                     </li>
                   ))}
@@ -116,10 +116,12 @@ const Home = () => {
           </div>
         </section>
       ))}
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="fill-theme-light dark:fill-darkmode-theme-light">
-        <path
-          d="M0,64L60,64C120,64,240,64,360,69.3C480,75,600,85,720,112C840,139,960,181,1080,170.7C1200,160,1320,96,1380,64L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
-        ></path>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        className="fill-theme-light dark:fill-darkmode-theme-light"
+      >
+        <path d="M0,64L60,64C120,64,240,64,360,69.3C480,75,600,85,720,112C840,139,960,181,1080,170.7C1200,160,1320,96,1380,64L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
       </svg>
       <Informations data={jadwal} />
       <Informations data={pengumuman} />
