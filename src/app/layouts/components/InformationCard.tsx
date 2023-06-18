@@ -32,7 +32,7 @@ const InformationCard = ({ data }: { data: Post }) => {
         <li className="mr-4 inline-block">
           <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
           {categories?.map((category: string, index: number) => (
-            <Link key={index} href={`/categories/${slugify(category)}`}>
+            <Link key={index} href={`/kategori/${slugify(category)}`}>
               {humanize(category)}
               {index !== categories.length - 1 && ", "}
             </Link>
