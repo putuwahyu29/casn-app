@@ -28,21 +28,6 @@ export type Post = {
   content?: string;
 };
 
-export type Author = {
-  frontmatter: {
-    title: string;
-    image?: string;
-    description?: string;
-    meta_title?: string;
-    socials: {
-      facebook: string;
-      twitter: string;
-      instagram: string;
-    };
-  };
-  content?: string;
-  slug?: string;
-};
 
 export type Feature = {
   button: button;
@@ -58,13 +43,6 @@ export type Informations = {
   slug: string;
 };
 
-export type Call_to_action = {
-  enable?: boolean;
-  title: string;
-  description: string;
-  image: string;
-  button: Button;
-};
 
 export type Button = {
   enable: boolean;
